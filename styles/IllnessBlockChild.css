@@ -1,0 +1,23 @@
+.illness__item {
+    margin-bottom: 26px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 4px rgba(6, 140, 166, 0.31);
+    border-radius: 10px;
+    padding: 16px 24px 29px 16px;
+    cursor: pointer;
+}
+.illness__item:nth-child(2) {
+    padding: 13px 5px 18px 16px;
+}
+
+.illness__item:last-child {
+    margin-bottom: 0;
+}
+.illness__item p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 2.7rem;
+    color: var(--main-text);
+}

@@ -1,12 +1,11 @@
 import React, {Fragment} from "react";
-import Header from "../components/Header";
-import {Main} from "next/document";
+import Layout from "../components/Layout";
 
 
 const Home = () => {
   return (
    <Fragment>
-     <Header/>
+       <Layout/>
    </Fragment>
   )
 }

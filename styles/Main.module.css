@@ -1,8 +1,32 @@
 .main {
     padding-top: 31px;
 }
-.wrapper {
-    max-width: 1264px;
-    margin: 0 auto;
-}
 
+.layout__2__column {
+    display: flex;
+    justify-content: space-between;
+}
+.layout__2__column > * {
+    flex-basis: 50%;
+}
+.message {
+    padding-left: 45px;
+    padding-top: 89px;
+}
+.message__text__main {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: var(--main-text);
+}
+.message__text__additional {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: var(--border-color);
+}
+.carousel {
+    padding: 81px 101px 69px 155px;
+}

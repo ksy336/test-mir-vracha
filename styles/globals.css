@@ -3,6 +3,8 @@
 :root {
   --main-text: #223867;
   --background: #F4FBFC;
+  --color-info: #028CA6;
+  --border-color: #068CA6;
 }
 html,
 body {
@@ -20,5 +22,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1264px;
+  margin: 0 auto;
 }
 
