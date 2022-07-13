@@ -1,0 +1,29 @@
+.header {
+    /*background: var(--background);*/
+}
+.wrapper {
+    max-width: 1264px;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+.heading {
+    margin-bottom: 10px;
+}
+.heading h1 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: center;
+    color: var(--main-text);
+}
+.choose h3 {
+    margin : 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+    color: var(--main-text);
+    text-align: center;
+}
