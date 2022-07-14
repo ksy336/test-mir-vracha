@@ -28,5 +28,9 @@
     color: var(--border-color);
 }
 .carousel {
-    padding: 81px 101px 69px 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 111px 102px 141px 293px;
+    max-width: 629px;
 }

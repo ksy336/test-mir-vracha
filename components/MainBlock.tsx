@@ -1,5 +1,6 @@
 import InfoForAdult from "./InfoForAdult";
 import InfoForChild from "./InfoForChild";
+import Carousel from "./Carousel";
 import styles from "../styles/Main.module.css";
 
 const MainBlock = () => {
@@ -18,11 +19,7 @@ const MainBlock = () => {
                         <span className={styles.message__text__additional}> (нажмите на любую иконку и узнайте больше)</span>
                     </span>
                 </div>
-                <section className={styles.carousel}>
-                    <div>
-
-                    </div>
-                </section>
+                <Carousel/>
         </main>
     );
 };
