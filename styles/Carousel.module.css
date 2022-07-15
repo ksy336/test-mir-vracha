@@ -168,7 +168,6 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 69px;
-
     }
 }
 @media screen and (max-width: 414px) {
@@ -176,13 +175,20 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 69px;
-        width: 300px;
+        width: 80vw;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
     }
     .circle__container > * {
-        
+        width: 30vw;
+        height: 3vh;
+    }
+    .circle__center img {
+        width: 70vw;
+        height: 30vh;
+        right: -90%;
+        position: absolute;
     }
 }
