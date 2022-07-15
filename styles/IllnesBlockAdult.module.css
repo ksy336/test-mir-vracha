@@ -23,3 +23,9 @@
     line-height: 2.7rem;
     color: var(--main-text);
 }
+@media screen and (max-width: 768px) {
+    .illness__item p {
+        font-size: 4.1rem;
+        line-height: 4.1rem;
+    }
+}

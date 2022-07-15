@@ -1,5 +1,6 @@
 .main {
     padding-top: 31px;
+    padding-bottom: 69px;
 }
 
 .layout__2__column {
@@ -9,6 +10,7 @@
 .layout__2__column > * {
     flex-basis: 50%;
 }
+
 .message {
     padding-left: 45px;
     padding-top: 89px;
@@ -33,4 +35,22 @@
     align-items: center;
     padding: 111px 102px 141px 293px;
     max-width: 629px;
+}
+@media screen and (max-width: 768px) {
+    .layout__2__column {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .layout__2__column > * {
+        flex-basis: 100%;
+
+    }
+    .message__text__main {
+        font-size: 3.8rem;
+        line-height: 3.1rem;
+    }
+    .message__text__additional {
+        font-size: 3.4rem;
+        line-height: 3.6rem;
+    }
 }

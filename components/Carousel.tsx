@@ -1,83 +1,59 @@
-import React, {useRef} from 'react';
+import React, {useState} from 'react';
 import styles from "../styles/Carousel.module.css";
 
 
 const Carousel = () => {
-    let info: any;
-    const refList = useRef<HTMLLIElement>(null);
-    const textRef = useRef<HTMLElement>(null);
-    console.log( textRef);
-    if (typeof window !== "undefined") {
-         info = document.createElement("span");
-    }
-    const textHandler = () => {
-       if(textRef?.current) {
-           const element =  textRef?.current;
-           console.log(element);
-           element.style.display = "inline-block";
-       }
-    }
-    const deleteTextHandler = () => {
-        if(textRef?.current) {
-            const element = textRef?.current;
-            console.log(element);
-            element.style.display = "none";
-        }
-    }
-    // let listAll;
-    // if (typeof window !== "undefined") {
-    //      listAll = Array.from(document.querySelectorAll("li"));
-    // }
-    // console.log(listAll);
-    // listAll?.forEach((list) => {
-    //     return list.addEventListener("mouseover", function () {
-    //         info = document.createElement("span");
-    //         info.innerText = "Ограниченная способность поднимать руки \n" +
-    //             "и переносить предметы";
-    //         list.append(info);
-    //     })
-    // })
-    // listAll?.forEach((list) => {
-    //     return list.addEventListener("mouseout", function () {
-    //        const element = document.querySelector("span");
-    //        element?.remove();
-    //     })
-    // })
+    const [showText, setShowText] = useState<boolean>(false);
+    const [lungsText, setLungsText] = useState<boolean>(false);
+    const [feetText, setFeetText] = useState<boolean>(false);
+    const [bonesText, setBonesText] = useState<boolean>(false);
+    const [pelvisText, setPelvisText] = useState<boolean>(false);
+    const [bodyText, setBodyText] = useState<boolean>(false);
+    const [croppedText, setCroppedText] = useState<boolean>(false);
+    const [manText, setManText] = useState<boolean>(false);
+
 
     return (
                 <ul className={styles.circle__container}>
-                    <li className={styles.circle__item} ref={refList} onMouseOver={textHandler} onMouseOut={deleteTextHandler} >
+                    <li className={styles.circle__item} onMouseOver={() => {setShowText(true)}} onMouseOut={() => {setShowText(false)}}>
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
-                        <img src="/images/head.png" alt="image of human body"/>
-                        <span className={styles.invisible__text} ref={textRef}>Ограниченная способность поднимать руки и переносить предметы</span>
+                        <img src="/images/head.png" alt="image of human body" />
+                        {showText && (<span className={styles.invisible__head} >Нарушения жевания и глотания</span>)}
                     </li>
-                    <li className={styles.circle__item}>
+                    <li className={styles.circle__item} onMouseOver={() => {setLungsText(true)}} onMouseOut={() => setLungsText(false)}>
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
                         <img src="/images/lungs.png" alt="image of human body"/>
+                        {lungsText && (<span className={styles.invisible__lungs}>Дыхательная недостаточность/ респираторная дисфункция</span>)}
                     </li>
-                    <li className={styles.circle__item}>
+                    <li className={styles.circle__item} onMouseOver={() => {setFeetText(true)}} onMouseOut={() => setFeetText(false)} >
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
                         <img src="/images/feet.png" alt="image of human body"/>
+                        {feetText && (<span className={styles.invisible__feet}>Неспособность бегать, изменение походки</span>)}
                     </li>
-                    <li className={styles.circle__item}>
+                    <li className={styles.circle__item} onMouseOver={() => {setBonesText(true)}} onMouseOut={() => setBonesText(false)} >
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
                         <img src="/images/bones.png" alt="image of human body"/>
+                        {bonesText && (<span className={styles.invisible__bones}>Контрактура суставов</span>)}
                     </li>
-                    <li className={styles.circle__item}>
+                    <li className={styles.circle__item} onMouseOver={() => {setPelvisText(true)}} onMouseOut={() => setPelvisText(false)}>
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
                         <img src="/images/pelvis.png" alt="image of human body"/>
+                        {pelvisText && (<span className={styles.invisible__pelvis}>Вывих бедра</span>)}
                     </li>
-                    <li className={styles.circle__item}>
+                    <li className={styles.circle__item} onMouseOver={() => {setBodyText(true)}} onMouseOut={() => setBodyText(false)} >
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
                         <img src="/images/woman.png" alt="image of human body"/>
+                        {bodyText && (<span className={styles.invisible__woman}>Утомляемость</span>)}
                     </li>
-                    <li className={styles.circle__item}>
+                    <li className={styles.circle__item} onMouseOver={() => {setCroppedText(true)}} onMouseOut={() => setCroppedText(false)}>
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
                         <img src="/images/cropped.png" alt="image of human body"/>
+                        {croppedText && (<span className={styles.invisible__cropped}>Сколиоз</span>)}
                     </li>
-                    <li className={styles.circle__item}>
+                    <li className={styles.circle__item} onMouseOver={() => {setManText(true)}} onMouseOut={() => setManText(false)}>
                         <img className={styles.circle__plus} src="/images/plus.png" alt="it's plus sign"/>
                         <img src="/images/man.png" alt="image of human body"/>
+                        {manText && (<span className={styles.invisible__man}>Ограниченная способность поднимать руки и переносить предметы</span>)}
                     </li>
                     <li className={styles.circle__center}>
                         <img src="/images/circle-picture.png" alt="image of human body"/>
